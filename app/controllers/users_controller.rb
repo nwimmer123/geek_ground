@@ -16,7 +16,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = "Email has already been taken"
-      redirect_to '/signup'
+      redirect_to session_new
     end
   end
 
