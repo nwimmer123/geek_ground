@@ -18,12 +18,21 @@
 
       <div>
         <h3>Movies</h3>
+        <% @books.each do |book| %>
+          <p><%= book.title %></p>
+        <% end %>
       </div>
       <div>
         <h3>TV Shows</h3>
+        <% @shows.each do |show| %>
+          <p><%= show.title %></p>
+        <% end %>
       </div>
       <div>
         <h3>Movies</h3>
+        <% @movies.each do |movie| %>
+          <p><%= movie.title %></p>
+        <% end %>
       </div>
 
     </div>
