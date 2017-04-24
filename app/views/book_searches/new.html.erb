@@ -1,1 +1,24 @@
 NEW BOOK SEARCH
+
+<div class="page">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+        <%= form_for :search, url: search_path do |f| %>
+          <fieldset>
+            <h1 class="text-center">Search For Your Book</h1>
+
+            <div class="form-group col-md-8">
+              <%= f.text_field :title, required: true, class: "form-control" %>
+            </div>
+
+            <div class="form-group col-md-8">
+              <%= f.submit "Search", class: "btn btn-success" %>
+            </div>
+
+          </fieldset>
+        <% end %>
+
+    </div>
+  </div>
+</div>
