@@ -1,5 +1,5 @@
 <ul class="list-group" id="books-list">
-  <% @search.each do |d| %>
+  <% @book_search.each do |d| %>
     <% d.data["items"].each do |i| %>
       <li class="list-group-item book" >
         <% the_book = i["volumeInfo"] %>
