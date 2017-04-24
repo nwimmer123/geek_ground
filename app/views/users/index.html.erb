@@ -4,7 +4,10 @@
     <h1>Geek Ground</h1>
   </div>
 
-  <% %>
+    <% if current_user %> 
+      <%= link_to "Add Book or Comic", new_book_search_path, class: "btn btn-primary pull-right" %>
+      <%= link_to "Add Movie or TV Show", new_movie_search_path, class: "btn btn-primary pull-right" %>
+    <% end %>
 
   <div class="row">
 
