@@ -12,18 +12,19 @@ class BookSearchesController < ApplicationController
 
     def create
       BookSearch.delete_all
-      book_name = params[:search][:title]
-      @book_search = BookSearch.new(search_params)
+  
+      book_name = params[:book_search][:title]
+      @book_search = BookSearch.new(book_search_params)
       @book_search.data = display_results(book_name)
       @book_search.save
 
-      redirect_to book_search_path
+      redirect_to book_searches_path
     end
 
     private
 
-      def search_params
-        params.require(:search).permit(:data)
+      def book_search_params
+        params.require(:book_search).permit(:data)
       end
 
 
