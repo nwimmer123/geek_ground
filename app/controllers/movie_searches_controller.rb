@@ -13,7 +13,7 @@ class MovieSearchesController < ApplicationController
     def create
       MovieSearch.delete_all
       movie_name = params[:movie_search][:title]
-      @movie_search = BookSearch.new(movie_search_params)
+      @movie_search = MovieSearch.new(movie_search_params)
       @movie_search.data = display_results(movie_name)
       @movie_search.save
 
@@ -22,7 +22,7 @@ class MovieSearchesController < ApplicationController
 
     private
 
-      def book_search_params
+      def movie_search_params
         params.require(:movie_search).permit(:data)
       end
 

@@ -1,0 +1,53 @@
+<ul class="list-group" id="movies-list">
+  <% @movie_search.each do |d| %>
+    <% d.data["results"].each do |i| %>
+      <% image = i["poster_path"]%>
+
+      <%= form_for :movie, url: new_movie_path do |f| %>
+          <fieldset>
+          
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Title</label>
+              <div class="col-md-8">
+                <%= f.text_field :title, value: i["title"], required: true, class: "form-control" %><br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Release Date</label>
+              <div class="col-md-8">
+                <%= f.text_field :premier, value: i["release_date"], required: true, class: "form-control" %><br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Overview</label>
+              <div class="col-md-8">
+                <%= f.text_area :summary, rows: 10,value: i["overview"], required: true, class: "form-control" %><br>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="genre">Genre</label>
+              <div class="col-md-8">
+                <%= f.select :genre, [["Sci-fi", "Sci-fi"], ["Fantasy", "Fantasy"],["Fiction", "Fiction"], ["Non-Fiction", "Non-Fiction"]], class: "form-control" %>
+              </div>
+            </div>
+
+            <%= f.hidden_field :image, value: image%>
+
+            <div class="form-group">
+              <div class="col-md-12">
+                <%= f.submit "Create Movie", class: "btn btn-success pull-right" %>
+              </div>
+            </div>
+            
+          </fieldset>
+        <% end %>
+    <% end %>
+
+              
+  <% end %>
+
+
+</ul>
