@@ -28,6 +28,9 @@
         <h3><%= link_to "Books", books_path %></h3>
         <% @books.each do |book| %>
           <p><%= book.title %></p>
+          <% if current_user%>
+            <%= link_to "Follow",  ,class: "btn btn-primary" %>
+          <% end %>
         <% end %>
       </div>
       <div>
