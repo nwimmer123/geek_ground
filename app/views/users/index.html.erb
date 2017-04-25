@@ -6,8 +6,9 @@
 
   <div class="container">
     <% if current_user %> 
-      <%= link_to "Add Book or Comic", new_book_search_path, class: "btn btn-primary pull-right" %>
-      <%= link_to "Add Movie or TV Show", new_movie_search_path, class: "btn btn-primary pull-right" %>
+      <%= link_to "Add Book/Comic", new_book_search_path, class: "btn btn-primary pull-right" %>
+      <%= link_to "Add Movie", new_movie_search_path, class: "btn btn-primary pull-right" %>
+      <%= link_to "Add TV Show", new_tv_search_path, class: "btn btn-primary pull-right" %>
     <% end %>
   </div>
 

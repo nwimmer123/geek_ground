@@ -1,24 +1,24 @@
-<ul class="list-group" id="movies-list">
-  <% @movie_search.each do |d| %>
+<ul class="list-group" id="tv-list">
+  <% @tv_search.each do |d| %>
     <% d.data["results"].each do |i| %>
       <% image = i["poster_path"]%>
 
-      <img alt="Movie Poster" class="homepageImages" src=<%= "http://image.tmdb.org/t/p/w500/#{image}" %> >
+      <img alt="TV Poster" class="homepageImages" src=<%= "http://image.tmdb.org/t/p/w500/#{image}" %> >
 
-      <%= form_for :movie, url: new_movie_path do |f| %>
+      <%= form_for :show, url: new_show_path do |f| %>
           <fieldset>
           
             <div class="form-group">
-              <label class="col-md-4 control-label" for="name">Title</label>
+              <label class="col-md-4 control-label" for="name">Name</label>
               <div class="col-md-8">
-                <%= f.text_field :title, value: i["title"], required: true, class: "form-control" %><br>
+                <%= f.text_field :title, value: i["name"], required: true, class: "form-control" %><br>
               </div>
             </div>
 
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Release Date</label>
               <div class="col-md-8">
-                <%= f.text_field :premier, value: i["release_date"], required: true, class: "form-control" %><br>
+                <%= f.text_field :premier, value: i["first_air_date"], required: true, class: "form-control" %><br>
               </div>
             </div>
 
