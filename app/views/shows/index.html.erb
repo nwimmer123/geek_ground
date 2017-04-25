@@ -1,0 +1,13 @@
+<ul class="list-group" id="shows-list">
+  <% @shows.each do |show| %>
+    <li class="col-md-6">
+      <div class="show">
+        <%= link_to show do %>
+          <img alt="Book Jacket" class="homepageImages" src=<%= show.image %> >
+        <% end %>
+        <h3><%= link_to show.title, show_path(show.id) %></h3>
+        <p><b><%= show.genre %></b></p>
+      </div>
+    </li>
+  <% end %>
+</ul> 

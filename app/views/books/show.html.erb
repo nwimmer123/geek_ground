@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="text-center"><%= @book.title %><h1>
+  <h3 class="text-center"><%= @book.author %><h3>
+</div>
+
+<ul class="container">
+  <img src=<%= @book.image %> alt="Book Jacket" id="showpageImages">
+  <p><b>Genre: </b><%= @book.genre %></p>
+  <p><b>Publisher: </b><%= @book.publisher %></p>
+  <p><b>Publication Date: </b><%= @book.publication_date %></p>
+  <p><b>Synopsis: </b><%= @book.synopsis %></p>
+</ul>

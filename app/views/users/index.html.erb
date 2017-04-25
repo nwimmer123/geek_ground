@@ -25,19 +25,19 @@
     <div class="col-md-6">
 
       <div>
-        <h3>Books</h3>
+        <h3><%= link_to "Books", books_path %></h3>
         <% @books.each do |book| %>
           <p><%= book.title %></p>
         <% end %>
       </div>
       <div>
-        <h3>TV Shows</h3>
+        <h3><%= link_to "TV Shows", shows_path %></h3>
         <% @shows.each do |show| %>
           <p><%= show.title %></p>
         <% end %>
       </div>
       <div>
-        <h3>Movies</h3>
+        <h3><%= link_to "Movies", movies_path %></h3>
         <% @movies.each do |movie| %>
           <p><%= movie.title %></p>
         <% end %>

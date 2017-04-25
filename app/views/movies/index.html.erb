@@ -1,0 +1,13 @@
+<ul class="list-group" id="movies-list">
+  <% @movies.each do |movie| %>
+    <li class="col-md-6">
+      <div class="movie">
+        <%= link_to movie do %>
+          <img alt="Book Jacket" class="homepageImages" src=<%= movie.image %> >
+        <% end %>
+        <h3><%= link_to movie.title, movie_path(movie.id) %></h3>
+        <p><b><%= movie.genre %></b></p>
+      </div>
+    </li>
+  <% end %>
+</ul> 

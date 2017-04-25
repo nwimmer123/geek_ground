@@ -21,7 +21,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @reviews = Review.hash_tree
+
   end
 
   def edit

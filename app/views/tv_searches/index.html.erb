@@ -1,9 +1,9 @@
 <ul class="list-group" id="tv-list">
   <% @tv_search.each do |d| %>
     <% d.data["results"].each do |i| %>
-      <% image = i["poster_path"]%>
+      <% image = "http://image.tmdb.org/t/p/w500/#{i["poster_path"]}"%>
 
-      <img alt="TV Poster" class="homepageImages" src=<%= "http://image.tmdb.org/t/p/w500/#{image}" %> >
+      <img alt="TV Poster" class="homepageImages" src=<%= image %> >
 
       <%= form_for :show, url: shows_path do |f| %>
           <fieldset>
