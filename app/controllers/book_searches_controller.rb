@@ -12,7 +12,6 @@ class BookSearchesController < ApplicationController
 
     def create
       BookSearch.delete_all
-  
       book_name = params[:book_search][:title]
       @book_search = BookSearch.new(book_search_params)
       @book_search.data = display_results(book_name)

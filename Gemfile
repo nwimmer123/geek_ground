@@ -27,6 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Generate React
 gem "react-rails"
+# Webpacker for react
+gem 'webpacker', '~> 2.0'
 # add bootstrap
 gem "bootstrap", "~> 4.0.0.alpha6"
 source 'https://rails-assets.org' do

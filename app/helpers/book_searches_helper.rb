@@ -3,7 +3,7 @@ module BookSearchesHelper
   require "net/http"
   require "json"
   require "openssl"
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  #OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   SECRET_KEY = Figaro.env.google_books
 
